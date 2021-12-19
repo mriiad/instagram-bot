@@ -79,6 +79,7 @@ class InstagramBot:
 
 if __name__ == "__main__":
 
+    # TODO: please replace values in the following two lines by the instagram account's username and password
     username = "username"
     password = "password"
 
