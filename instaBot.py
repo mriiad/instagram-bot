@@ -4,7 +4,6 @@ import time
 import random
 import sys
 
-
 class InstagramBot:
     def __init__(self, username, password):
         self.username = username
@@ -29,11 +28,6 @@ class InstagramBot:
         passworword_elem.send_keys(self.password)
         passworword_elem.send_keys(Keys.RETURN)
         time.sleep(6)
-
-        # "//a[@href'accounts/login']"
-        # "//input[@name='username']"
-        # "//input[@name='password']"
-
 
     def like_photo(self, hashtag):
         driver = self.driver
@@ -64,9 +58,6 @@ class InstagramBot:
             time.sleep(2)
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             try:
-                #time.sleep(random.randint(2, 4))
-                #follow_button = driver.find_element_by_xpath('//input[@name="Follow"]')
-                #follow_button.click()
                 like_button = lambda: driver.find_element_by_xpath('//span[@aria-label="Like"]').click()
                 like_button().click()
                 for second in reversed(range(0, random.randint(18, 28))):
@@ -94,7 +85,7 @@ if __name__ == "__main__":
 
     while True:
         try:
-            # Choose a random tag from the list of tags
+            # Randomly choose a tag from the list of tags
             for tag in hashtags:
                 #tag = random.choice(hashtags)
                 ig.like_photo(tag)
