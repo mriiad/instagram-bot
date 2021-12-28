@@ -1,5 +1,5 @@
 # instagram-bot
-A bot for instagram to like all pictures found in given hashtag using Selenium
+A bot for instagram to like all pictures found in a given hashtags/locations list using Selenium
 
 ## To run this bot
 1. Install Python (version +3.x)
